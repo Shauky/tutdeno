@@ -8,5 +8,12 @@
   </head>
   <body>
     <div id="content">contacting api...</div>
+    <script>
+    (async () => {
+      const resp = await fetch('./api/version');
+      document.getElementById('content').innerText = await resp.text();
+    })();
+    </script>
   </body>
+
 </html>
