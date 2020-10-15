@@ -6,12 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vercel Deno</title>
   </head>
-  <script type="module">
-    (async () => {
-      const resp = await fetch('./api/version');
-      document.getElementById('app').innerText = await resp.text();
-    })();
-  </script>
   <body>
     <div id="content">contacting api...</div>
   </body>

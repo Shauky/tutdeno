@@ -15,9 +15,14 @@ export default ({ examples }) => {
 	return (
 		<div>
 			<p>Hello from Deno, powered by Vercel!</p>
+			<div id="app"></div>
 			<div>
+					(async () => {
+						const resp = await fetch('./api/version');
+						document.getElementById('app').innerText = await resp.text();
+					})();
 				<h3>Examples:</h3>
-				<ul>	
+				<ul>
 					{examples.map((example) => (
 						<li key={example}>
 							<Link href={`/api/${example}`}>
