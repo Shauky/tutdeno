@@ -1,0 +1,50 @@
+{
+  "name": "vercel-deno",
+  "version": "0.7.3",
+  "description": "Vercel Runtime for Deno serverless functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Nathan Rajlich <nate@vercel.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/TooTallNate/vercel-deno",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooTallNate/vercel-deno.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --project src/tsconfig.json",
+    "postbuild": "cpy src '!**/*.ts' dist && cpy src/runtime.ts src/dev-server.ts dist",
+    "now-build": "next build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@tootallnate/once": "^1.1.2",
+    "yn": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.17",
+    "@types/react": "^16.9.36",
+    "@typescript-eslint/eslint-plugin": "1.6.0",
+    "@typescript-eslint/parser": "1.1.0",
+    "@vercel/build-utils": "^2.4.0",
+    "@vercel/frameworks": "^0.0.14",
+    "@vercel/routing-utils": "^1.8.2",
+    "cpy-cli": "^2.0.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.9.3"
+  }
+}

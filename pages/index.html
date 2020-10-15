@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tutorcast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>Tutorcast with Deno</title>
+  <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' rel='stylesheet'>
+  <link href="styles.css" rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <div id="app">
+    <div class="feature-drawer">
+      <header>
+         <h3> Tutorcast </h3>
+         <!-- <a href="#"> Login </a> -->
+      </header>
+    </div>
+  <!-- container here -->
+     <div id="onboard">
+       <div class="present-tools" style="width:100px;">
+
+           <a href="/chat"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17" style="
+           width: 32px;
+           height: 29px;
+           padding: 10px 20px 0 0;
+           "><g></g><path d="M12.991 6.75v-2.25c0-0.827-0.678-1.5-1.512-1.5h-7.479v-0.5c0-0.276 0.225-0.5 0.5-0.5h5.541v-1h-5.541c-0.827 0-1.5 0.673-1.5 1.5v0.5h-1.488c-0.834 0-1.512 0.673-1.512 1.5v2.001c0 0.827 0.678 1.5 1.512 1.5h0.504v5.499c0 0.827 0.673 1.5 1.5 1.5h7.964c0.834 0 1.512-0.673 1.512-1.5v-2.251l4.008 2.783v-10.065l-4.009 2.783zM16 12.121l-4.009-2.783v4.162c0 0.276-0.229 0.5-0.512 0.5h-7.963c-0.275 0-0.5-0.224-0.5-0.5v-6.499h-1.504c-0.283 0-0.512-0.224-0.512-0.5v-2.001c0-0.276 0.229-0.5 0.512-0.5h9.968c0.282 0 0.512 0.224 0.512 0.5v4.163l4.008-2.784v6.242z" fill="black"></path></svg></a>
+           <h3> New Scene </h3>
+
+           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59" height="30" viewBox="0 0 17 17" style="width:50px;color: white;padding: 10px 20px 0 0;"><g></g><path d="M9 2v-2h-1v2h-7v10h15v-10h-7zM15 11h-13v-8h13v8zM3.5 13h10v1h-2.584l1.504 2.326-0.84 0.543-1.855-2.869h-0.725v3h-1v-3h-0.712l-1.869 2.87-0.838-0.545 1.514-2.325h-2.595v-1z" fill="black"></path></svg>
+           <h3> Slideshow </h3>
+
+           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17" style="
+            width: 32px;
+            height: 25px;
+            padding: 10px 20px 0 0;
+            "><g></g><path d="M4.492 0h-1.984c-0.827 0-1.5 0.673-1.5 1.5v10.657l2.521 4.956 2.464-4.959v-10.654c-0.001-0.827-0.674-1.5-1.501-1.5zM2.508 1h1.984c0.275 0 0.5 0.225 0.5 0.5v1.019h-2.984v-1.019c0-0.275 0.224-0.5 0.5-0.5zM2.008 4.55v-1.031h2.984v1.031h-2.984zM3.948 14.021h-0.87l-1.070-2.104v-6.367h1v6.481h1v-6.481h0.984v6.37l-1.044 2.101zM8 0v17h7v-17h-7zM14 16h-5v-0.984h2v-1h-2v-1.016h1v-1h-1v-1h2v-1h-2v-0.984h1v-1h-1v-1h2v-1h-2v-1.016h1v-1h-1v-1h2v-1h-2v-1h5v15z" fill="black"></path></svg>
+           <h3> Classroom </h3>
+
+           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="neos" class="svg-inline--fa fa-neos fa-w-16" role="img" viewBox="0 0 512 512" style="width: 32px;/* height: 60px; */padding: 10px 20px 0 0;"><path fill="black" d="M415.44 512h-95.11L212.12 357.46v91.1L125.69 512H28V29.82L68.47 0h108.05l123.74 176.13V63.45L386.69 0h97.69v461.5zM38.77 35.27V496l72-52.88V194l215.5 307.64h84.79l52.35-38.17h-78.27L69 13zm82.54 466.61l80-58.78v-101l-79.76-114.4v220.94L49 501.89h72.34zM80.63 10.77l310.6 442.57h82.37V10.77h-79.75v317.56L170.91 10.77zM311 191.65l72 102.81V15.93l-72 53v122.72z" class="__web-inspector-hide-shortcut__"></path></svg>
+           <h3> News </h3>
+
+       </div>
+     </div>
+     <div class-"present-tools" style="width:80vw;">
+       <div class="newplan">
+         <p> A vivid collection of tools
+           for writers, educators, students and publishers. Visualizing documents on a fun new digital canvas. </p>
+       </div>
+       <div class="newplan">
+         <p> Paper is loved, but can get cumbersome. Let us help you take your favorite paper activity to screen. With Scenes & Paperworks, create, animate, save and feature your Publications with us. </p>
+       </div>
+       <div class="newplan">
+         <p> Begin with a new Scene or Presentation, Build content and learn with others. Build up as you go with great
+         templates and content. Work and present offline and continue sharing everywhere. </p>
+       </div>
+   </div>
+  </div>
+<script src="https://use.fontawesome.com/0579f97fd6.js"></script>
+<!-- <script src="https://tutorcast.xkit.co/xkit.js"></script> -->
+</body>
+</html>

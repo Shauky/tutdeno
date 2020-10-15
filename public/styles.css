@@ -1,0 +1,108 @@
+@import "app.css"; */
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 5px 50px;
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #F5F7F7;
+}
+
+header {
+  display: flex;
+  align-items:baseline;
+
+}
+
+header h3{
+  font-family: Arvo;
+  font-size: 18pt;
+  padding-left: 10px;
+  margin-left: 50px;
+  padding-right: 15px;
+}
+
+svg{
+  margin-left: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #3b474d;
+  --main-color-light: #89ebeb;
+  --main-color-dark: #263238;
+}
+
+div#onboard {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-left: 50px;
+  padding-left: 10px;
+}
+
+
+.newplan {
+  position: relative;
+  margin-left: 10vw;
+  margin-top:10vw;
+}
+
+
+.present-tools {
+  width:100px;
+  margin-left: 50px;
+  display: contents;
+  padding-left: 10px;
+}
+/* Icons from Fotnt Awesome */
+
+.search__icon .fa-search {
+  color: grey;
+  font-size: 18px;
+}
+
+.search__icon .fa-pencil-square-o {
+  color: grey;
+  font-size: 18px;
+}
+
+/* Icons sprite */
+
+.icon-attachment {
+  width: 12px;
+  height: 20px;
+  background-position: -5px -5px;
+}
+
+.icon-smiles {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -61px;
+}
+
+
+/* Side Drawer */
+
+.feature-drawer {
+  width: 20vw;
+  padding: 10px 50px;
+}
+
+.feature-drawer a, .feature-drawer h3 {
+  margin: 10px 5px 10px 5px;
+}
