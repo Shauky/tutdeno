@@ -25,7 +25,7 @@ listenAndServe({ port: 5000 }, async (req) => {
         req.respond({
           status:200,
           headers:  req.headers,
-          body: await Deno.open('../pages/index.html'),
+          body: await Deno.open('./pages/index.html'),
       })
     }
 
@@ -33,7 +33,7 @@ listenAndServe({ port: 5000 }, async (req) => {
         req.respond({
           status:200,
           headers:  req.headers,
-          body: await Deno.open('../pages/paper.html'),
+          body: await Deno.open('./pages/paper.html'),
       })
     }
 
@@ -41,7 +41,7 @@ listenAndServe({ port: 5000 }, async (req) => {
         req.respond({
           status:200,
           headers:  req.headers,
-          body: await Deno.open('../pages/chat.html'),
+          body: await Deno.open('./pages/chat.html'),
       })
     }
 
@@ -49,7 +49,7 @@ listenAndServe({ port: 5000 }, async (req) => {
         req.respond({
           status:200,
           headers:  req.headers,
-          body: await Deno.open('../public/app.css'),
+          body: await Deno.open('./pages/public/app.css'),
       })
     }
 
@@ -57,7 +57,7 @@ listenAndServe({ port: 5000 }, async (req) => {
         req.respond({
           status:200,
           headers:  req.headers,
-          body: await Deno.open('../public/styles.css'),
+          body: await Deno.open('./pages/public/styles.css'),
       })
     }
   });
