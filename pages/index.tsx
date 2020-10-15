@@ -3,35 +3,37 @@ import Link from 'next/link';
 import { basename, extname, join } from 'path';
 
 export async function getStaticProps() {
-	const apiDir = join(process.cwd(), 'api');
+	const apiDir = join(process.cwd(), 'pages');
 	const apiFiles = await fs.promises.readdir(apiDir);
-	const examples = apiFiles
-		.filter((f) => f.endsWith('.ts') || f.endsWith('.js'))
+	const pages = apiFiles
+		.filter((f) => f.endsWith('.tsx') || f.endsWith('.html'))
 		.map((f) => basename(f, extname(f)));
-	return { props: { examples } };
+	return { props: { pages } };
 }
 
-export default ({ examples }) => {
+export async function named() {
+	const resp = await fetch('../api/hello');
+	document.getElementById('content').innerText = await resp.text();
+};
+
+export default ({ pages }) => {
 	return (
 		<div>
 			<p>Hello from Deno, powered by Vercel!</p>
 			<div id="app"></div>
 			<div>
-					(async () => {
-						const resp = await fetch('./api/version');
-						document.getElementById('app').innerText = await resp.text();
-					})();
-				<h3>Examples:</h3>
+				<h3>Browse:</h3>
 				<ul>
-					{examples.map((example) => (
-						<li key={example}>
-							<Link href={`/api/${example}`}>
-								<a>{example}</a>
+					{pages.map((page) => (
+						<li key={page}>
+							<Link href={`/${[page]}`}>
+								<a>{page}</a>
 							</Link>
 						</li>
 					))}
 				</ul>
 			</div>
+      <div id="content">contacting api...</div>
 		</div>
 	);
 };
